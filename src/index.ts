@@ -17,7 +17,7 @@ async function readTheConfigFile() {
 
 function openWebProject() {
   console.log("Web project has been started in localhost http://localhost:4007/");
-  shell.exec('bash ./web_project/hi.sh')
+  shell.exec('bash node_modules/massets/web_project/hi.sh')
 }
 
 // async function _getBase64Value(path: String){
@@ -102,5 +102,5 @@ function _createJSONFile(assets: any): void {
     },
   );
 }
-openWebProject()
 
+readTheConfigFile()
