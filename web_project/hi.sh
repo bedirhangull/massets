@@ -1,5 +1,4 @@
-open "http://localhost:4007"
-cd node_modules/massets/web_project
-ls
+echo "selamlar"
+cd ./web_project
 npm install
 npm run dev

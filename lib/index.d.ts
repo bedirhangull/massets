@@ -4,8 +4,9 @@ declare const sizeOf: any;
 declare const spawn: any;
 declare const glob: any;
 declare const ncp: any;
+declare var shell: any;
 declare function readTheConfigFile(): Promise<void>;
-declare function openWebProject(): boolean;
+declare function openWebProject(): void;
 /**
  * type -> 1 -> vertical rectangle
  * type -> 2 -> square

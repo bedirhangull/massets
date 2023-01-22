@@ -4,6 +4,7 @@ const sizeOf = require("image-size");
 const spawn = require("cross-spawn");
 const glob = require("glob");
 const ncp = require('ncp')
+var shell = require('shelljs');
 
 async function readTheConfigFile() {
   fse.readFile("massets.config.json", "utf-8")
@@ -16,12 +17,7 @@ async function readTheConfigFile() {
 
 function openWebProject() {
   console.log("Web project has been started in localhost http://localhost:4007/");
-  const result = spawn.sync(
-    "sh",
-    ["./node_modules/massets/web_project/hi.sh"],
-    { encoding: "utf8" }
-  );
-  return false;
+  shell.exec('bash ./web_project/hi.sh')
 }
 
 // async function _getBase64Value(path: String){
@@ -106,5 +102,5 @@ function _createJSONFile(assets: any): void {
     },
   );
 }
+openWebProject()
 
-readTheConfigFile();
