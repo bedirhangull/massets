@@ -27,11 +27,11 @@ You can see your assets in web project and search assets from asset name. Masset
     ```
 - You have to add script in your package.json
     #### package.json
-    ```http
-          "scripts": {
+    ```
+        "scripts": {
             ...
             "massets-start": "node node_modules/massets/lib/index.js",
-          },
+        },
     ```
 - Then it will start in http://localhost:4007/
 - that's it :) 
