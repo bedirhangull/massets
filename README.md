@@ -30,9 +30,10 @@ You can see your assets in web project and search assets from asset name. Masset
     ```
         "scripts": {
             ...
-            "massets-start": "node node_modules/massets/lib/index.js",
+            "massets": "massets-start",
         },
     ```
+- npm run massets or yarn massets
 - Then it will start in http://localhost:4007/
 - that's it :) 
 

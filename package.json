@@ -4,12 +4,17 @@
   "description": "Massests is a assets managment tool for big projects",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": {
+    "massets-start": "bin/start.js"
+  },
+  "preferGlobal": true,
   "files": [
     ".",
     "src",
     "web_project",
     "node_modules",
-    "lib"
+    "lib",
+    "bin"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
