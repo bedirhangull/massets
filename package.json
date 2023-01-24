@@ -1,6 +1,6 @@
 {
   "name": "massets",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Massests is a assets managment tool for big projects",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -57,3 +57,4 @@
     "shelljs": "^0.8.5"
   }
 }
+
