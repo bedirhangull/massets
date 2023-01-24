@@ -11,40 +11,40 @@ export default function Home() {
     const [imageWidth, setImageWidth] = useState(0);
 
     const calculateSize = () => {
-        switch (props.assetType) {
-            case 1:
-                setImageHeight(200)
-                setImageWidth(150)
-                break;
-            case 2:
-                setImageHeight(200)
-                setImageWidth(200)
-                break;
-            case 3:
-                setImageHeight(100)
-                setImageWidth(200)
-                break;
-            default:
-                break;
-        }
+      switch (props.assetType) {
+        case 1:
+          setImageHeight(200)
+          setImageWidth(150)
+          break;
+        case 2:
+          setImageHeight(200)
+          setImageWidth(200)
+          break;
+        case 3:
+          setImageHeight(100)
+          setImageWidth(200)
+          break;
+        default:
+          break;
+      }
     }
 
     useEffect(() => {
-        calculateSize()
-        if (typeof props.assetType) { setImageHeight(props.assetType.height), setImageWidth(props.assetType.width) }
+      calculateSize()
+      if (typeof props.assetType) { setImageHeight(props.assetType.height), setImageWidth(props.assetType.width) }
     })
 
     const { src, assetName } = props;
 
     return (
-        <div className="m-4 rounded-md text-center flex-colum width-fix">
-            <img className="object-contain rounded-md mx-auto" src={src} key={src} height={imageHeight} width={imageWidth} />
-            <div className="m-4">
-                <h1 className="text-sm text-black max-w-sm break-all">{assetName}</h1>
-            </div>
+      <div className="m-4 rounded-md text-center flex-colum width-fix">
+        <img className="object-contain rounded-md mx-auto" src={src} key={src} height={imageHeight} width={imageWidth} />
+        <div className="m-4">
+          <h1 className="text-sm text-black max-w-sm break-all">{assetName}</h1>
         </div>
+      </div>
     )
-}
+  }
 
   const [groupedAssets, setGroupedAssets] = useState(new Map());
   const [searchAssets, setSearchAssets] = useState([]);
@@ -119,7 +119,7 @@ export default function Home() {
         {Array.from(groupedAssets.entries()).map(([title, assets]) => (
           <div className='px-20 mt-10' key={title}>
             <div className='bg-black p-2 inline-flex '>
-              <h1 className='dark:text-white font-bold text-xl'>{title}</h1>
+              <h1 className='dark:text-white text-white font-bold text-xl'>{title}</h1>
             </div>
             <div className='grid md:grid-cols-6'>
               {assets.map((asset) => (
