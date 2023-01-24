@@ -40,7 +40,7 @@ export default function Home() {
         <div className="m-4 rounded-md text-center flex-colum width-fix">
             <img className="object-contain rounded-md mx-auto" src={src} key={src} height={imageHeight} width={imageWidth} />
             <div className="m-4">
-                <h1 className="text-sm text-black max-w-sm">{assetName}</h1>
+                <h1 className="text-sm text-black max-w-sm break-all">{assetName}</h1>
             </div>
         </div>
     )
