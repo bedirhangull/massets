@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react'
+
 import '../src/app/globals.css'
 import assets from '../src/utils/data/assets.json'
 
@@ -65,13 +66,12 @@ export default function Home() {
 
   const _handleSearchText = (e) => {
     setSearchText(e.target.value);
-    const test = assets.filter((asset) => {
+    const filteredArray = assets.filter((asset) => {
       return (
         asset.assetName.toLowerCase().includes(e.target.value.toLowerCase())
       )
     })
-    setSearchAssets(test)
-    console.log(searchAssets)
+    setSearchAssets(filteredArray)
     if (e.target.value === '') setSearchAssets([])
   }
 
